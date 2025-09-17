@@ -1,7 +1,7 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     margin: 0;
     background: #92d1e4;
     color: #070707
@@ -15,6 +15,17 @@ header {
     justify-content: space-between;
     align-items: center
 }
+
+
+p {
+  font-size: 20px; 
+  line-height: 1.6;
+}
+
+
+
+
+
 
 nav a {
     color: #fff;
@@ -96,4 +107,21 @@ float: left;
   width: 100%;
   border-radius: 12px;
 }
+
+
+
+
+li {
+  font-size: 20px; 
+   line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
 
