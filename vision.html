@@ -1,33 +1,35 @@
-<!doctype html>
-<html lang="es">
+<!doctype html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es">  <!-- El contenido está en español -->
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visión - Unimec IPS</title>
-  <link rel="stylesheet" href="Estilos.css">
- 
+  <meta charset="utf-8"> <!-- Codificación de caracteres (soporta tildes y ñ) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- Diseño responsive -->
+  <title>Visión - Unimec IPS</title>  <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="Estilos.css">  <!-- Hoja de estilos personalizada -->
+ <!-- Librería de iconos FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Encabezado de la página -->
   <header>
-      <img src="img/logo unimedic.png" alt="">
-           <h1>© Unimedic IPS</h1>
+      <img src="img/logo unimedic.png" alt="">  <!-- Logo de la empresa -->
+           <h1>© Unimedic IPS</h1> <!-- Nombre de la empresa -->
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="mision.html">Misión</a>
-      <a href="vision.html">Visión</a>
-      <a href="Quienes-somos.html">Quiénes Somos</a>
-      <a href="valores.html">Valores</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
-       <a href="Tecnologias.html">Tecnologias</a>
+       <a href="index.html">Inicio</a>  <!-- Enlace al inicio -->
+      <a href="mision.html">Misión</a> <!-- Enlace a misión -->
+      <a href="vision.html">Visión</a> <!-- Enlace a visión -->
+      <a href="Quienes-somos.html">Quiénes Somos</a> <!-- Enlace a quiénes somos -->
+      <a href="valores.html">Valores</a> <!-- Enlace a valores -->
+      <a href="servicios.html">Servicios</a> <!-- Enlace a servicios -->
+      <a href="contacto.html">Contacto</a> <!-- Enlace a servicios -->
+       <a href="Tecnologias.html">Tecnologias</a>  <!-- Enlace a tecnologías -->
     </nav>
   </header>
-
+ <!-- Contenido principal -->
   <main>
-    <h2>Visión</h2>
+    <h2>Visión</h2>  <!-- Título de la sección -->
+    <!-- Lista de vison i -->
     <p>
       “Ser una IPS líder y referente en la región, el país y con proyección internacional, reconocida por la excelencia
       de nuestros resultados clínicos, la experiencia humanizada y segura del paciente y la eficiencia de nuestra
@@ -49,16 +51,20 @@
       vida saludables y asegurando un impacto positivo, sostenible y duradero en la sociedad.”
     </p>
   </main>
-
+ <!-- Pie de página -->
   <footer>
-    © <span id="year"></span> Unimedic IPS — Todos los derechos reservados
+    © <span id="year"></span> Unimedic IPS — Todos los derechos reservados <!-- Año dinámico -->
+      <!-- Redes sociales -->
     <div class="redes">
+
             <a href="https://www.facebook.com/profile.php?id=61557952013444.com" target="_blank"><i class="fab fa-facebook"></i></a>
+             <!-- Icono de Instagram -->
             <a href="https://www.instagram.com/unimedicips?igsh=MXZwZTV2bGhnYWhuNA==.com" target="_blank"><i class="fab fa-instagram"></i></a>
+               <!-- Icono de WhatsApp -->
             <a href="https://wa.me/573178345647" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
-
+<!-- Script para insertar el año actual en el footer -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
   </script>

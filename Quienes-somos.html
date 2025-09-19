@@ -1,34 +1,35 @@
-<!doctype html>
-<html lang="es">
+<!doctype html>  <!-- Indica que el documento usa HTML5 -->
+<html lang="es">  <!-- Define el idioma del contenido en español -->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quiénes Somos - Unimec IPS</title>
-    <link rel="stylesheet" href="Estilos.css">
-
+    <meta charset="utf-8"> <!-- Codificación de caracteres (tildes y ñ) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptación a móviles -->
+    <title>Quiénes Somos - Unimec IPS</title> <!-- Título de la pestaña en el navegador -->
+    <link rel="stylesheet" href="Estilos.css"> <!-- Vincula la hoja de estilos CSS -->
+     <!-- Librería de iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <header>
-
-        <img src="img/logo unimedic.png" alt="">
-        <h1>© Unimedic IPS</h1>
+ <!-- Encabezado principal -->
+        <img src="img/logo unimedic.png" alt="">  <!-- Logo de la empresa -->
+        <h1>© Unimedic IPS</h1> <!-- Nombre de la empresa -->
         <nav>
-             <a href="index.html">Inicio</a>
-      <a href="mision.html">Misión</a>
-      <a href="vision.html">Visión</a>
-      <a href="Quienes-somos.html">Quiénes Somos</a>
-      <a href="valores.html">Valores</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
-       <a href="Tecnologias.html">Tecnologias</a>
+            <a href="index.html">Inicio</a>  <!-- Enlace al inicio -->
+      <a href="mision.html">Misión</a> <!-- Enlace a misión -->
+      <a href="vision.html">Visión</a> <!-- Enlace a visión -->
+      <a href="Quienes-somos.html">Quiénes Somos</a> <!-- Enlace a quiénes somos -->
+      <a href="valores.html">Valores</a> <!-- Enlace a valores -->
+      <a href="servicios.html">Servicios</a> <!-- Enlace a servicios -->
+      <a href="contacto.html">Contacto</a> <!-- Enlace a servicios -->
+       <a href="Tecnologias.html">Tecnologias</a>  <!-- Enlace a tecnologías -->
         </nav>
     </header>
-
+    <!-- Contenido principal -->
     <main>
-        <h2>Quiénes Somos</h2>
+        <h2>Quiénes Somos</h2> <!-- Título de la sección -->
+          <!-- Párrafo descriptivo sobre la institución -->
         <p>
             "Unimec IPS: Cuidado Integral para una Vida Plena.
             En Unimec IPS, nos dedicamos apasionadamente al bienestar integral de nuestros pacientes y sus familias.
@@ -50,7 +51,9 @@
             necesidades, entender sus preocupaciones y construir soluciones de salud personalizadas. Más que una
             institución de salud, somos un aliado en su camino hacia una vida más saludable y plena."
         </p>
+           <!-- Sección de objetivos -->
         <h2>Nuestros objetivos</h2>
+         <!-- Lista de objetivos estratégicos -->
         <p>
             <li>Mejorar continuamente la calidad de los servicios mediante procesos de evaluación y retroalimentación.</li>
 
@@ -81,21 +84,26 @@
 
         </p>
     </main>
+     <!-- Video de YouTube incrustado -->
 
     <div><iframe width="900" height="1000" src="https://www.youtube.com/embed/TVSHeLZoONU?si=Ub7nBJxMY2bJ5QLh"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <!-- Pie de página -->
     <footer>
-        © <span id="year"></span> Unimedic IPS — Todos los derechos reservados
-
+        © <span id="year"></span> Unimedic IPS — Todos los derechos reservados <!-- Año dinámico -->
+        <!-- Redes sociales -->
         <div class="redes">
+            <!-- Icono de Facebook -->
            <a href="https://www.facebook.com/profile.php?id=61557952013444.com" target="_blank"><i class="fab fa-facebook"></i></a>
+           <!-- Icono de Instagram -->
             <a href="https://www.instagram.com/unimedicips?igsh=MXZwZTV2bGhnYWhuNA==.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Icono de WhatsApp -->
             <a href="https://wa.me/573178345647" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
-
+ <!-- Script que inserta automáticamente el año actual -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear()
     </script>

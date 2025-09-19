@@ -1,13 +1,13 @@
-<!doctype html>
-<html lang="es">
+<!doctype html> <!-- Declaración del tipo de documento, indica que es HTML5 -->
+<html lang="es"> <!-- Inicio del documento HTML, configurado en español -->
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>© Unimec IPS</title>
+  <meta charset="utf-8"> <!-- Codificación de caracteres para admitir tildes y ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- Ajusta el diseño a móviles -->
+  <title>© Unimec IPS</title>  <!-- Título de la pestaña del navegador -->
 
  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  <!-- Vincula el archivo de estilos CSS -->
 
   <style>
     body {
@@ -84,21 +84,26 @@
 
 <body>
   <header>
-     <img src="img/logo unimedic.png" alt="">
-           <h1>© Unimedic IPS</h1>
+     <img src="img/logo unimedic.png" alt=""> <!-- Logo de la empresa -->
+           <h1>© Unimedic IPS</h1> <!-- Título principal del sitio -->
+           
+           
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="mision.html">Misión</a>
-      <a href="vision.html">Visión</a>
-      <a href="Quienes-somos.html">Quiénes Somos</a>
-      <a href="valores.html">Valores</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
-       <a href="Tecnologias.html">Tecnologias</a>
+      <a href="index.html">Inicio</a> <!-- Enlace a la página principal -->
+      <a href="mision.html">Misión</a> <!-- Enlace a misión -->
+      <a href="vision.html">Visión</a> <!-- Enlace a visión -->
+      <a href="Quienes-somos.html">Quiénes Somos</a> <!-- Enlace a quiénes somos -->
+      <a href="valores.html">Valores</a> <!-- Enlace a quiénes somos -->
+      <a href="servicios.html">Servicios</a> <!-- Enlace a servicios -->
+      <a href="contacto.html">Contacto</a> <!-- Enlace a contacto -->
+       <a href="Tecnologias.html">Tecnologias</a> <!-- Enlace a tecnologías -->
     </nav>
   </header>
+    <!-- Imagen principal del banner -->
 <img src="img/Unimec imagen - copia.png" alt="" srcset="" width="1905" height="700">
   <main>
+      
+  <!-- Contenido principal -->
     <h2>Bienvenido a Unimedic IPS</h2>
     <p>En Unimedic IPS trabajamos cada día con la convicción de que la salud es el mayor tesoro de las personas y de la
       comunidad. Somos una institución prestadora de servicios de salud dedicada a brindar una atención integral, segura
@@ -134,6 +139,8 @@
 
    <main>
     <h2>Misión</h2>
+    
+  <!-- Sección Misión -->
     <p>
       “Brindamos servicios de salud integrales, seguros, oportunos y centrados en la persona, sustentados en la mejor
       evidencia científica y en un enfoque de equidad e inclusión. Contamos con un equipo humano competente, ético y
@@ -153,6 +160,8 @@
 
  <main>
     <h2>Visión</h2>
+    
+  <!-- Sección Misión -->
     <p>
       “Ser una IPS líder y referente en la región, el país y con proyección internacional, reconocida por la excelencia
       de nuestros resultados clínicos, la experiencia humanizada y segura del paciente y la eficiencia de nuestra
@@ -174,41 +183,44 @@
       vida saludables y asegurando un impacto positivo, sostenible y duradero en la sociedad.”
     </p>
   </main>
-
+  <!-- Pie de página -->
   <footer>
-    © <span id="year"></span> Unimedic IPS — Todos los derechos reservados
+    © <span id="year"></span> Unimedic IPS — Todos los derechos reservados <!-- Texto dinámico con año -->
 
+        <!-- Enlaces a redes sociales -->
     <div class="redes">
             <a href="https://www.facebook.com/profile.php?id=61557952013444.com" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/unimedicips?igsh=MXZwZTV2bGhnYWhuNA==.com" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/573178345647" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
-
+ <!-- Script para insertar el año automáticamente -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
   </script>
+  <!-- Script de Swiper.js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+    // Configuración del carrusel Swiper
   var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
+    effect: "coverflow",  // Efecto tipo "coverflow"
+    grabCursor: true, // El cursor cambia como "mano"
+    centeredSlides: true, // Centra las diapositivas
+    slidesPerView: "auto", // Ajusta el número de slides visibles automáticamente
     coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
+      rotate: 50,  // Ángulo de rotación
+      stretch: 0,  // Espaciado entre imágenes
+      depth: 100,   // Profundidad 3D
+      modifier: 1,  // Intensidad del efecto
+      slideShadows: true, // Agregar sombras
     },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+      el: ".swiper-pagination", // Selector de paginación
+      clickable: true, // Puntos clicables
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next", // Flecha derecha
+      prevEl: ".swiper-button-prev", // Flecha izquierda
     },
   });
 </script>
