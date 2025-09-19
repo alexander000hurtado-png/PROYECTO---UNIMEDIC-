@@ -41,4 +41,4 @@ Navega por las secciones desde el menú superior (Inicio, Misión, Visión, Qui�
 
 Revisa la información institucional en cada página.
 
-Accede a las redes sociales de la empresa a través de los íconos de Facebook, Instagram y WhatsApp
+Accede a las redes sociales de la empresa a través de los íconos de Facebook, Instagram y WhatsApp.
