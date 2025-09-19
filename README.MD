@@ -10,9 +10,9 @@ Sitio web institucional de Unimedic IPS, una empresa prestadora de servicios de 
 
 Lenguaje usado:
 
-HTML5
+HTML
 
-CSS3
+CSS
 
 JavaScript (para funciones dinámicas como el año automático en el footer)
 
