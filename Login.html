@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión</title>
+       <link rel="stylesheet" href="Estilos.css"> <!-- Enlace a la hoja de estilos personalizada -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+   Librería de iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+   <!-- Encabezado de la página -->
+    <header>
+        <img src="img/logo unimedic.png" alt=""> <!-- Logo de la empresa -->
+        <h1>© Unimedic IPS</h1> <!-- Nombre de la empresa -->
+
+      
+    </header>
+
+
+
+
+  <div class="card" >
+    <h2>Iniciar sesión</h2>
+    <input type="email" id="correoLogin" placeholder="Correo electrónico">
+    <input type="password" id="passwordLogin" placeholder="Contraseña">
+    <button id="btnLogin">Entrar</button>
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+  </div>
+
+  <script>
+    document.getElementById("btnLogin").addEventListener("click", () => {
+      const correo = document.getElementById("correoLogin").value.trim();
+      const password = document.getElementById("passwordLogin").value;
+      const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+      if (!usuario) {
+        alert("No hay usuarios registrados.");
+        return;
+      }
+
+      if (correo === usuario.correo && password === usuario.password) {
+        localStorage.setItem("sesionActiva", JSON.stringify(usuario));
+        window.location.href = "Formulario.html";
+      } else {
+        alert("Correo o contraseña incorrectos.");
+      }
+    });
+  </script>
+
+      <!-- Pie de página -->
+    <footer>
+        © <span id="year"></span> Unimedic IPS — Todos los derechos reservados <!-- Año dinámico -->
+               <!-- Redes sociales -->
+        <div class="redes">
+            <!-- Icono de Facebook -->
+           <a href="https://www.facebook.com/profile.php?id=61557952013444.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          
+           
+            <a href="https://www.instagram.com/unimedicips?igsh=MXZwZTV2bGhnYWhuNA==.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Icono de WhatsApp -->
+            <a href="https://wa.me/573178345647" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </footer>
+     <!-- Script para insertar el año actual en el footer -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear()
+    </script>
+</body>
+</html>
