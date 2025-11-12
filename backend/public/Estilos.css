@@ -1,0 +1,644 @@
+
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+   background: #020024;
+background: #020024;
+background: linear-gradient(333deg, rgb(184, 210, 240) 0%, rgb(184, 210, 240)16%, rgb(184, 210, 240) 47%);
+}
+
+header {
+    background: #111213;
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+p {
+  font-size: x; 
+  line-height: 1.6;
+}
+
+
+
+
+nav a {
+    color: #fff;
+    margin-left: 18px;
+    text-decoration: none
+}
+
+nav a:hover {
+    text-decoration: underline
+}
+
+main {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto
+}
+
+h1 {
+    margin: 30px
+}
+
+h1, h2, h3 {
+   font-family: 'Times New Roman', Times, serif, sans-serif;
+    text-align: center;
+     font-weight: bold; 
+     margin: 30px
+}
+
+footer {
+    background: #080808;
+    color: #ccc;
+    padding: 12px 22px;
+    text-align: center;
+    margin-top: 600px
+     
+}
+
+
+.redes a i {
+  font-size: 22px; 
+  margin: 0 20px;  
+  color: #f3f2f7;     
+  transition: transform 0.3s, color 0.3s;
+}
+
+.redes a i:hover {
+  color: #eff1f1;   
+  transform: scale(1.2); 
+}
+
+.video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+
+.tam {
+width: 200px;
+height: auto;
+margin: 7px auto;
+float: left;
+
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 100px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+
+
+li {
+  font-size: 20px; 
+   line-height: 1.6;
+}
+
+.grid{
+  background-color: #070707;
+
+}
+
+.container{
+
+  margin-top: 150px;
+}
+
+
+.logo_empresa{
+
+  width: 200px;
+  height: 100px;
+   border: 5px solid rgb(151, 161, 238);
+   box-shadow: 5px 5px 10px rgba(139, 241, 236, 0.5);
+  
+/*
+
+1. cambiar el alto
+2. cambiar el ancho
+3. colocar borde (borde Faduis)
+4. colocar sombra
+*/
+}
+
+.col{
+  color:#000000;
+  text-align: justify;
+}
+.col img{
+  width: 200px;
+  height: 100px;
+   border: 5px solid rgb(65, 71, 122);
+   box-shadow: 5px 5px 10px rgba(32, 240, 229, 0.5);
+}
+.imagen_html{
+  margin-left: 200px;
+}
+ 
+.navbar-brand{
+   font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    
+}
+p {
+  font-size: 20px; 
+}
+
+.navbar{
+  color: #eff1f1;
+  background-color: #0c0101d0;
+}
+
+
+
+nav a {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  font-size: 18px;
+  color: #faf8f8;
+  text-decoration: none;
+  margin-right: 15px; /* Espaciado entre enlaces */
+}
+
+nav a:hover {
+  color: #0051ff;
+}
+
+.Informe_tecnico{
+  
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  font-size: 20px;
+  color: #faf8f8;
+  text-decoration: none;
+  margin-right: 15px; /* Espaciado entre enlaces */
+}
+
+nav a:hover {
+  color: #0051ff;
+}
+
+ 
+    
+       
+
+        form {
+            margin-top: 15px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form input,
+        form select {
+            margin: 5px;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            background: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #004080;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #e6f0ff;
+        }
+
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+
+
+
+
+        
+    .card {
+  margin: 50px auto;
+  max-width: 400px; /* ajusta según necesites */
+}   
+
+.card {
+  background-color: #6cd9f5; /* Cambia este color */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.card input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.card button {
+  padding: 12px 30px;
+  background-color: #0937f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card button:hover {
+  background-color: #3949ab;
+}
+
+.card p {
+  color: #333;
+  margin-top: 20px;
+}
+
+.card a {
+  color: #4a5fc1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+.card { box-shadow: 0 15px 40px rgba(20, 16, 236, 0.603); }
+.card { margin: 20px auto; }
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* === Campos de entrada === */
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #629aee;
+  outline: none;
+  box-shadow: 0 0 8px #63c4f1;
+}
+
+
+
+
+
+
+a {
+  color: #64a7f3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sección principal centrada */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* espacio entre tarjeta y mapa */
+  padding: 50px 0;
+}
+
+/* Tarjeta de contacto */
+.contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 700px; /* 🔹 mismo ancho máximo que el mapa */
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact-card h2 {
+  color: #0c0c0c;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del mapa */
+.map-container {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px; /* 🔹 Ajusta la altura del mapa */
+  border: none;
+  display: block;
+  border-radius: 15px;
+}
+
+ 
+  
+        /* Estilos para el catálogo de servicios */
+        .servicios-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .servicios-container h2 {
+            text-align: center;
+            color: #050505;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .servicio-card {
+            background: rgba(12, 12, 12, 0.911);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .servicio-icon {
+            font-size: 3.5em;
+            color: #0a0a0ae0;
+            margin-bottom: 20px;
+        }
+
+        .servicio-card h3 {
+            color: #000000f1;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .servicio-card p {
+            color: #050505e8;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+   
+   
+  
+   
+    /* Estilos para el catálogo de valores */
+    .valores-container {
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .valores-container h2 {
+      text-align: center;
+      color: #000000dc;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .valores-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding: 20px;
+    }
+
+    /* Responsive: 2 columnas en tablets */
+    @media (max-width: 1024px) {
+      .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Responsive: 1 columna en móviles */
+    @media (max-width: 640px) {
+      .valores-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .valor-card {
+      background: white;
+      border-radius: 15px;
+      padding: 35px 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .valor-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .valor-icon {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+    }
+
+    .valor-card h3 {
+      color: #2c3e50;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .valor-card p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 1.05em;
+    }
+
+    /* Colores diferentes para cada valor */
+    .valor-card:nth-child(1) .valor-icon { color: #e74c3c; }
+    .valor-card:nth-child(2) .valor-icon { color: #3498db; }
+    .valor-card:nth-child(3) .valor-icon { color: #2ecc71; }
+    .valor-card:nth-child(4) .valor-icon { color: #f39c12; }
+    .valor-card:nth-child(5) .valor-icon { color: #9b59b6; }
+    .valor-card:nth-child(6) .valor-icon { color: #1abc9c; }
+    .valor-card:nth-child(7) .valor-icon { color: #e67e22; }
+    .valor-card:nth-child(8) .valor-icon { color: #34495e; }
+  
+    *
+       
+        main {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        main > h2 {
+            text-align: center;
+            color: #0a0a0ad5;
+            margin: 3rem 0 1.5rem 0;
+            font-size: 2.5rem;
+        }
+
+        main > p {
+            text-align: justify;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .objetivos-titulo {
+            text-align: center;
+            color: #070707;
+            margin: 4rem 0 2rem 0;
+            font-size: 2.2rem;
+        }
+
+        .catalogo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .objetivo-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #667eea;
+        }
+
+        .objetivo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .objetivo-numero {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .objetivo-icono {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .objetivo-texto {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        .t-t{
+          font-size: 30px;
+          color: #ffffff;
+         font-family: 'Times New Roman', Times, serif, sans-serif;
+         margin: 0;
+        }
+
+ .t-t{
+            margin: 0;
+            padding: 30px;
+            
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+        }
+        
+       

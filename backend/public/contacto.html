@@ -1,0 +1,89 @@
+<!doctype html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Indica que el contenido está en español -->
+
+
+<head>
+    <meta charset="utf-8"> <!-- Codificación de caracteres (soporta tildes y ñ) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptación a dispositivos móviles -->
+    <title>Contacto - Unimec IPS</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="Estilos.css"> <!-- Enlace a la hoja de estilos personalizada -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+   Librería de iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+<header>
+    <img src="img/LOGO Umedic.png" alt=""srcset="" width="150" height="120">
+    <h1>© Umedic IPS</h1>
+    
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Quienes-somos.html">Quiénes Somos</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="Tecnologias.html">Tecnologías</a>
+      <a href="Informe_tecnico.html">Informe técnico</a>
+      <a href="inventario.html">Inventario</a>
+       <a href="gestion_medicos.html">Gestión Médicos</a>
+        <a href="gestion_pacientes.html">Gestión Pacientes</a>
+         <a href="agendamiento_citas.html">Agendamiento Citas</a>
+    
+          
+    </nav>
+  </header>
+<!-- Contenido principal -->
+<main class="contact-section">
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <!-- Tarjeta de contacto centrada -->
+      <div class="col-md-8 col-lg-7">
+        <div class="card shadow-lg border-0 rounded-3 contact-card">
+          <div class="card-body text-center">
+            <h2 class="card-title mb-4">Contacto</h2>
+            <p><i class="bi bi-telephone-fill"></i> <strong>Tel:</strong> 304 370 9097</p>
+            <p><i class="bi bi-envelope-fill"></i> <strong>Correo:</strong> atencionalusuario@umedicips.com</p>
+            <p><i class="bi bi-geo-alt-fill"></i> <strong>Dirección:</strong> Terminal del Norte, Cra. 64c #78-580 Tercer piso, Local 40, Oleoducto, Medellín, Castilla, Medellín, Antioquia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mapa centrado -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8 col-lg-7">
+        <div class="map-container shadow-lg rounded-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156156.68558538347!2d-75.65374974730307!3d6.27896775822474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44295b2e4774d1%3A0x5034b226f3360eed!2sUMEDIC%20Ecograf%C3%ADas%20y%20Doppler!5e1!3m2!1ses-419!2sco!4v1762355847055!5m2!1ses-419!2sco" 
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+    © <span id="year"></span> Umedic IPS – Todos los derechos reservados
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61554207387945" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/umedicsaludips?igsh=aXk4am5mczl1ZGF0" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/573043709097" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+    <!-- Script para insertar el año actual en el footer -->
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear()
+    </script>
+</body>
+
+</html>

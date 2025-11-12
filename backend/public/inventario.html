@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario - Umedic IPS</title>
+  <link rel="stylesheet" href="Estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<header>
+    <img src="img/LOGO Umedic.png" alt=""srcset="" width="150" height="120">
+    <h2>© Umedic IPS</h2>
+    
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Quienes-somos.html">Quiénes Somos</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="Tecnologias.html">Tecnologías</a>
+      <a href="Informe_tecnico.html">Informe técnico</a>
+      <a href="inventario.html">Inventario</a>
+       <a href="gestion_medicos.html">Gestión Médicos</a>
+        <a href="gestion_pacientes.html">Gestión Pacientes</a>
+         <a href="agendamiento_citas.html">Agendamiento Citas</a>
+    
+          
+    </nav>
+  </header>
+
+<button id="logout" style="background-color: #0026ff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+  Cerrar sesión
+</button>
+
+  
+<script>
+  document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("sesionIniciada");
+    window.location.href = "login.html";
+  });
+
+  if (localStorage.getItem("sesionIniciada") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+
+
+
+
+
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="max-w-5xl mx-auto mt-10 p-8 bg-white rounded-2xl shadow-lg">
+    <h1 class="text-4xl font-bold text-center mb-8 text-blue-700"> Umedic IPS</h1>
+
+    <!-- Sección para agregar productos -->
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-6 bg-white p-4 rounded-lg shadow">
+  <input id="nombre" type="text" placeholder="Nombre del producto"
+    class="border border-gray-300 bg-white text-black rounded-lg p-2">
+  <input id="precio" type="number" placeholder="Precio ($)"
+    class="border border-gray-300 bg-white text-black rounded-lg p-2">
+  <input id="cantidad" type="number" placeholder="Cantidad"
+    class="border border-gray-300 bg-white text-black rounded-lg p-2">
+  <button id="agregar"
+    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+    Agregar
+  </button>
+</div>
+    <!-- Tabla de productos -->
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse text-sm sm:text-base">
+        <thead>
+          <tr class="bg-blue-100 text-blue-800">
+            <th class="border p-2">Producto</th>
+            <th class="border p-2">Precio ($)</th>
+            <th class="border p-2">Cantidad</th>
+            <th class="border p-2">Subtotal ($)</th>
+            <th class="border p-2">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaProductos"></tbody>
+      </table>
+    </div>
+
+    <!-- Totales -->
+    <div class="flex flex-col sm:flex-row justify-between items-center mt-6 gap-3">
+      <div class="font-semibold">
+        Total productos: <span id="totalProductos">0</span> |
+        Valor total: $<span id="valorTotal">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Referencias del DOM
+    const nombre = document.getElementById("nombre");
+    const precio = document.getElementById("precio");
+    const cantidad = document.getElementById("cantidad");
+    const agregar = document.getElementById("agregar");
+    const tabla = document.getElementById("tablaProductos");
+    const totalProductos = document.getElementById("totalProductos");
+    const valorTotal = document.getElementById("valorTotal");
+
+    // Cargar datos guardados
+    let productos = JSON.parse(localStorage.getItem("inventarioUmedic")) || [];
+
+    function guardarDatos() {
+      localStorage.setItem("inventarioUmedic", JSON.stringify(productos));
+    }
+
+    function renderizarTabla() {
+      tabla.innerHTML = "";
+      let totalValor = 0;
+
+      productos.forEach((p, i) => {
+        const subtotal = p.precio * p.cantidad;
+        totalValor += subtotal;
+
+        const fila = document.createElement("tr");
+        fila.classList.add("hover:bg-gray-50");
+        fila.innerHTML = `
+          <td contenteditable="true" class="border p-2" onblur="editarCampo(${i}, 'nombre', this.innerText)">${p.nombre}</td>
+          <td contenteditable="true" class="border p-2" onblur="editarCampo(${i}, 'precio', this.innerText)">${p.precio}</td>
+          <td contenteditable="true" class="border p-2" onblur="editarCampo(${i}, 'cantidad', this.innerText)">${p.cantidad}</td>
+          <td class="border p-2 text-center font-semibold">$${subtotal.toFixed(2)}</td>
+          <td class="border p-2 text-center">
+            <button onclick="eliminarProducto(${i})" class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Eliminar</button>
+          </td>
+        `;
+        tabla.appendChild(fila);
+      });
+
+      totalProductos.textContent = productos.length;
+      valorTotal.textContent = totalValor.toFixed(2);
+      guardarDatos();
+    }
+
+    function editarCampo(index, campo, valor) {
+      const v = campo === "precio" || campo === "cantidad" ? Number(valor) : valor.trim();
+      productos[index][campo] = isNaN(v) ? valor : v;
+      renderizarTabla();
+    }
+
+    function eliminarProducto(index) {
+      if (confirm("¿Deseas eliminar este producto?")) {
+        productos.splice(index, 1);
+        renderizarTabla();
+      }
+    }
+
+    agregar.addEventListener("click", () => {
+      if (!nombre.value.trim() || !precio.value || !cantidad.value) {
+        alert("Por favor completa todos los campos.");
+        return;
+      }
+      productos.push({
+        nombre: nombre.value.trim(),
+        precio: Number(precio.value),
+        cantidad: Number(cantidad.value)
+      });
+      nombre.value = "";
+      precio.value = "";
+      cantidad.value = "";
+      renderizarTabla();
+    });
+
+    [nombre, precio, cantidad].forEach(input => {
+      input.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") agregar.click();
+      });
+    });
+
+    // Render inicial
+    renderizarTabla();
+  </script>
+
+
+ <footer>
+    © <span id="year"></span> Umedic IPS – Todos los derechos reservados
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61554207387945" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/umedicsaludips?igsh=aXk4am5mczl1ZGF0" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/573043709097" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+</body>
+</html>

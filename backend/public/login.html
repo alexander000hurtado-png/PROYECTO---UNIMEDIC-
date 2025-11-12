@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="Estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+   <img src="img/LOGO Umedic.png" alt=""srcset="" width="150" height="120">
+      <h1>© Umedic IPS</h1>
+  </header>
+
+  <!-- Tarjeta de Login -->
+  <div class="card">
+    <h2>Iniciar sesión</h2>
+    <input type="email" id="correo" placeholder="Correo electrónico">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button id="btnLogin">Entrar</button>
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+  </div>
+
+  <script>
+    document.getElementById("btnLogin").addEventListener("click", () => {
+      const correo = document.getElementById("correo").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (!correo || !password) {
+        alert("Por favor, completa todos los campos.");
+        return;
+      }
+
+      // Recuperar usuario almacenado
+      const usuarioGuardado = JSON.parse(localStorage.getItem("usuario"));
+
+      if (!usuarioGuardado) {
+        alert("No hay ningún usuario registrado. Regístrate primero.");
+        return;
+      }
+
+      // Validar credenciales
+      if (correo === usuarioGuardado.correo && password === usuarioGuardado.password) {
+        alert(`Bienvenido, ${usuarioGuardado.nombre }! 👋`);
+        // Guardamos sesión iniciada
+        localStorage.setItem("sesionIniciada", "true");
+        window.location.href = "inventario.html"; // redirige al inicio o dashboard
+        
+      } else {
+        alert("Correo o contraseña incorrectos.");
+      }
+    });
+  </script>
+  
+
+  <!-- Pie de página -->
+  <footer>
+    © <span id="year"></span> Unimedic IPS — Todos los derechos reservados
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61557952013444" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/unimedicips" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/573178345647" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

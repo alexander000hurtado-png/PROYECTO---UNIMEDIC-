@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Técnico</title>
+   <link rel="stylesheet" href="Estilos.css"><!-- Enlace a la hoja de estilos personalizada -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- Librería de iconos de FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+        
+
+
+<body>
+
+<header>
+    <img src="img/LOGO Umedic.png" alt=""srcset="" width="150" height="120">
+    <h2>© Umedic IPS</h2>
+    
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Quienes-somos.html">Quiénes Somos</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="Tecnologias.html">Tecnologías</a>
+      <a href="Informe_tecnico.html">Informe técnico</a>
+      <a href="inventario.html">Inventario</a>
+       <a href="gestion_medicos.html">Gestión Médicos</a>
+        <a href="gestion_pacientes.html">Gestión Pacientes</a>
+         <a href="agendamiento_citas.html">Agendamiento Citas</a>
+    
+          
+    </nav>
+  </header>
+
+    <!-- Cierre de barras de navegación -->
+
+    <!-- 2 Columna-->
+    <div class="contenedor">
+    <div class="container text-center">
+        <div class="row align-items-start">
+            <div class="col">
+                <h2>HTML</h2>
+                <P>HTML (HyperText Markup Language) es el lenguaje de marcado estándar utilizado para crear y
+                    estructurar páginas web. No es un lenguaje de programación, sino un sistema de etiquetas que permite
+                    organizar el contenido en elementos como textos, enlaces, imágenes, formularios y tablas.
+
+                    Su función principal es definir la estructura semántica de un sitio web, indicando al navegador cómo
+                    debe mostrarse la información. Desde su versión más reciente, HTML5, incorpora etiquetas modernas
+                    que mejoran la accesibilidad, integran contenido multimedia sin necesidad de complementos y permiten
+                    desarrollar aplicaciones web más dinámicas.
+
+                    En el proyecto, HTML se utilizó para dar forma a la página, creando el encabezado, el menú de
+                    navegación, el formulario de contacto y la organización general del sitio.</P>
+                <P>
+                    Definió la estructura general (head, body, header, section).
+
+                    Organizó la información en encabezados, párrafos, enlaces y formularios.
+
+                    Permitió crear un menú de navegación funcional y un formulario interactivo para contacto.
+
+                    Se aplicaron etiquetas semánticas que mejoran la accesibilidad y la organización lógica del
+                    contenido.</P>
+                <img  class="imagen_html" src="https://cdn.raiolanetworks.com/blog/wp-content/uploads/archivo-index.html.png"
+                    alt="" srcset="">
+            </div>
+            <div class="col">
+                <h2>CSS</h2>
+                <P>CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo en cascada que controla la
+                    presentación visual de los documentos HTML, separando la estructura del contenido de su apariencia.
+                    Permite definir colores, tipografías, tamaños, márgenes, bordes, fondos y la disposición de los
+                    elementos en la página, además de incorporar animaciones y transiciones que enriquecen la
+                    experiencia del usuario. Gracias a sus capacidades de diseño responsivo, CSS asegura que los sitios
+                    web se adapten a diferentes dispositivos como computadoras, tablets y smartphones. Sus reglas se
+                    aplican siguiendo una jerarquía en cascada y pueden escribirse en línea, de forma interna o en
+                    archivos externos reutilizables. 
+                </P>
+                <p>En el proyecto, CSS se utilizó principalmente a través del framework Bootstrap 5, el cual ya incluye
+                    un conjunto de estilos predefinidos:
+
+                    Se aplicaron estilos al menú de navegación (navbar) para que se viera moderno y responsivo.
+
+                    Se dieron estilos uniformes a los campos del formulario de contacto, como bordes, colores y tamaños
+                    de entrada.
+
+                    El botón de envío se personalizó con clases de Bootstrap (btn btn-primary) para destacar
+                    visualmente.</p>
+                    <img class="imagen_html" src="https://disenowebakus.net/imagenes/articulos/aprender-css-hojas-de-estilo-en-cascada.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<div class="d-flex justify-content-center">
+  <div class="spinner-border text-primary" role="status"></div>
+  <div class="spinner-border text-danger mx-2" role="status"></div>
+  <div class="spinner-border text-warning" role="status"></div>
+   <div class="spinner-border text-primary" role="status"></div>
+  <div class="spinner-border text-danger mx-2" role="status"></div>
+  <div class="spinner-border text-warning" role="status"></div>
+</div>
+
+
+
+ <footer>
+    © <span id="year"></span> Umedic IPS – Todos los derechos reservados
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61554207387945" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/umedicsaludips?igsh=aXk4am5mczl1ZGF0" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/573043709097" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+     <!-- Script para insertar el año actual en el footer -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

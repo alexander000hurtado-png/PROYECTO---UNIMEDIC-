@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Médicos | Umedic IPS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+
+
+
+<body>
+  <header class="encabezado">
+   <img src="img/LOGO Umedic.png" alt=""srcset="" width="150" height="120">
+    <h2>Gestión de Médicos</h2>
+    <a href="index.html" class="btn btn-light">🏠 Volver al Menú</a>
+  </header>
+
+  <main class="container my-4">
+    <form id="formMedico" class="formulario">
+      <input placeholder="Nombres" id="nombreMedico" required />
+      <input placeholder="Apellidos" id="apellidoMedico" required />
+      <input placeholder="ID" id="idMedico" required />
+      <select id="espMedico" required>
+        <option value="">Especialidad</option>
+        <option>Cardiología</option>
+        <option>Pediatría</option>
+        <option>Rehabilitación</option>
+        <option>Nutrición</option>
+      </select>
+      <input placeholder="Registro Médico" id="regMedico" required />
+      <input placeholder="Correo" type="email" id="correoMedico" required />
+      <input placeholder="Teléfono" id="telMedico" required />
+      <input placeholder="Disponibilidad (ej: L-V)" id="dispMedico" required />
+      <button type="submit" class="btn btn-primary">Registrar Médico</button>
+    </form>
+    <div id="listaMedicos"></div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const formMedico = document.getElementById('formMedico');
+
+        if (formMedico) {
+            formMedico.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const datosMedico = {
+                    idMedico: document.getElementById('idMedico').value,
+                    nombreMedico: document.getElementById('nombreMedico').value,
+                    apellidoMedico: document.getElementById('apellidoMedico').value,
+                    espMedico: document.getElementById('espMedico').value,
+                    regMedico: document.getElementById('regMedico').value,
+                    correoMedico: document.getElementById('correoMedico').value,
+                    telMedico: document.getElementById('telMedico').value
+                };
+
+                try {
+                    const response = await fetch('http://localhost:3000/medicos', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(datosMedico),
+                    });
+
+                    const resultado = await response.json();
+
+                    if (response.ok) {
+                        alert('✅ Médico registrado con éxito!');
+                        formMedico.reset();
+                    } else {
+                        alert(`❌ Error al registrar médico: ${resultado.error || 'Verifique el servidor.'}`);
+                    }
+                } catch (error) {
+                    alert('❌ Error de conexión. Asegúrese de que el servidor Express esté corriendo.');
+                }
+            });
+        }
+    });
+  </script>
+
+   <footer>
+    © <span id="year"></span> Umedic IPS – Todos los derechos reservados
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61554207387945" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/umedicsaludips?igsh=aXk4am5mczl1ZGF0" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/573043709097" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
