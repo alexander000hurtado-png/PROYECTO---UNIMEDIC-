@@ -18,7 +18,21 @@
     <h2>Gestión de Médicos</h2>
     <a href="index.html" class="btn btn-light">🏠 Volver al Menú</a>
   </header>
+<button id="logout" style="background-color: #0026ff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+  Cerrar sesión
+</button>
 
+  
+<script>
+  document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("sesionIniciada");
+    window.location.href = "login.html";
+  });
+
+  if (localStorage.getItem("sesionIniciada") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
   <main class="container my-4">
     <form id="formMedico" class="formulario">
       <input placeholder="Nombres" id="nombreMedico" required />
