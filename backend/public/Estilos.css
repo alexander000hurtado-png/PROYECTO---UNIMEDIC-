@@ -1,7 +1,7 @@
 
 
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-family: 'Arial', Times, serif, sans-serif;
     margin: 0;
    background: #020024;
 background: #020024;
@@ -11,17 +11,19 @@ background: linear-gradient(333deg, rgb(184, 210, 240) 0%, rgb(184, 210, 240)16%
 header {
     background: #111213;
     color: #fff;
-    padding: 20px 30px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center
 }
 
 
+
 p {
-  font-size: x; 
-  line-height: 1.6;
+    font-size: 1.25rem; /* Tamaño de letra 1.25 veces el tamaño base (aprox. 20px) */
+    line-height: 2.6; /* Espaciado entre líneas para mejor legibilidad */
 }
+
 
 
 
@@ -47,7 +49,7 @@ h1 {
 }
 
 h1, h2, h3 {
-   font-family: 'Times New Roman', Times, serif, sans-serif;
+   font-family: 'Arial', Times, serif, sans-serif;
     text-align: center;
      font-weight: bold; 
      margin: 30px
@@ -641,4 +643,43 @@ a:hover {
             max-width: 600px;
         }
         
+
+        .logo-container {
+    position: relative; /* Establece el contexto de posicionamiento */
+    width: 100%;
+    height: 100%;
+}
+
+.logo-animado {
+    /* Posicionamiento y tamaño */
+    position: absolute;
+    width: 150px;
+    height: auto;
+
+    /* Animación */
+    animation-name: deslizar;
+    animation-duration: 8s; /* Duración de la animación */
+    animation-timing-function: linear; /* Tipo de curva de velocidad */
+    animation-iteration-count: infinite; /* Repetir infinitamente */
+    animation-direction: alternate; /* Hace que rebote de vuelta */
+}
+
+/* Definición de la animación */
+@keyframes deslizar {
+    0% {
+        /* Posición inicial: en el borde izquierdo (0px) */
+        left: 0;
+        transform: translateX(0);
+    }
+    100% {
+        /* Posición final: hasta el borde derecho (100% del contenedor) */
+        /* La función calc() ajusta la posición para que el borde derecho del logo toque el borde derecho de la pantalla */
+        left: 100%;
+        transform: translateX(-100%);
+    }
+}
        
+p {
+    font-size: 1.25rem; 
+    line-height: 1.6;
+}
